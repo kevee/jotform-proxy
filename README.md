@@ -6,7 +6,7 @@ A simple proxy that solves a 302 redirect problem with files uploaded to Jotform
 
 When a user submits an image or document to a Jotform form, a special URL is generated for each image and is passed to the Make service using an API call. These URLs look like this:
 
-https://www.jotform.com/uploads/user/123/456/moon.jpg
+`https://www.jotform.com/uploads/user/123/456/moon.jpg`
 
 The URL passed to Make via the Jotform API is actually a URL to a location that then redirects the user to a new file, so asking for the above file actually redirects you to something like:
 
