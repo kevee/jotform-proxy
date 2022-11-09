@@ -4,6 +4,10 @@ const https = require('https')
 const request = require('request')
 const port = process.env.PORT || 3001
 
+/**
+ * Main route, fetches a file from Jotform and pipes it through
+ * if the URL exists on Jotform's servers.
+ */
 app.get('/*', (req, res) => {
   console.log(req.params[0])
   https.get(`https://www.jotform.com/${req.params[0]}`, (resp) => {
